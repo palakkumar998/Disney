@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import './globals.css'
+import Header from '@/components/ui/Header'
 
 //? Layout is Top level file of this Application
 
@@ -16,7 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body >{children}</body>
+
+      <body >
+        <Header />
+
+        {children}
+      </body>
     </html>
   )
 }
