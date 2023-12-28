@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 import './globals.css'
 import Header from '@/components/ui/Header'
+import { ThemeProvider } from '@/components/ui/ThemeProvider'
 
 //? Layout is Top level file of this Application
 
@@ -18,10 +19,17 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body >
-        <Header />
+      <body className='bg-white dark:bg-[#15171E]' >
 
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <Header />
+        </ThemeProvider>
       </body>
     </html>
   )
