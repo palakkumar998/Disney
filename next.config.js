@@ -4,7 +4,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: "https",
-                hostname: "www.cdnlogo.com/logos/d/46/disney.svg"
+                hostname: "links.papareact.com"
             }
         ]
     }
