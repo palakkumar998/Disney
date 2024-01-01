@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { ThemeToggler } from './ThemeToggler'
 import SearchInput from './SearchInput'
+import GenreDropdown from './GenreDropdown'
 
 function Header() {
     return (
@@ -15,7 +16,7 @@ function Header() {
                 height={100}
                 className='cursor-pointer invert-0 dark:invert' />
             <div className='flex space-x-2 ' >
-                {/* {/* genreDropdown */}
+                <GenreDropdown/>
                 
                 <SearchInput />
                 <ThemeToggler />
