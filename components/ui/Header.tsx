@@ -16,8 +16,7 @@ function Header() {
                 height={100}
                 className='cursor-pointer invert-0 dark:invert' />
             <div className='flex space-x-2 ' >
-                <GenreDropdown/>
-                
+                <GenreDropdown/>   
                 <SearchInput />
                 <ThemeToggler />
             </div>
