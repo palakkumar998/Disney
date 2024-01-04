@@ -28,7 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          <Header />
+          {/* <Header /> */}
         </ThemeProvider>
       </body>
     </html>
