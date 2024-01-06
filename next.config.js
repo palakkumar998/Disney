@@ -3,11 +3,16 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                protocol: "https",
-                hostname: "links.papareact.com"
-            }
-        ]
-    }
-}
+                protocol: "http",
+                hostname: "image.tmdb.org",
+            },
 
-module.exports = nextConfig
+            {
+                protocol: "https",
+                hostname: "links.papareact.com",
+            },
+        ],
+    },
+};
+
+module.exports = nextConfig;
