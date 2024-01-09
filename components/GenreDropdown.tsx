@@ -24,7 +24,7 @@ async function GenreDropdown() {
             revalidate: 60 * 60 * 24,  // for chaching , 24 hours
         }
     };
-    const response = await fetch(url, options)
+    const response = await fetch(url.toString(), options)
     const data = (await response.json()) as Genres
 
     console.log(data.genres);
@@ -34,15 +34,17 @@ async function GenreDropdown() {
             <DropdownMenuTrigger className="text-white justify-center items-center flex" >Genre
                 <ChevronDown className="ml-1" />
             </DropdownMenuTrigger>
+
             <DropdownMenuContent>
                 <DropdownMenuLabel>Select any Genre</DropdownMenuLabel>
                 <DropdownMenuSeparator />
 
-            {/*//? <-------Map function with genre iterator to fetch all genres from the API------> */}
+                {/*//? <-------Map function with genre iterator to fetch all genres from the API------> */}
                 {data.genres.map((genre) => (
-                    <DropdownMenuItem key={genre.id} >
-                        <Link href={`/genre/${genre.id}?genre=${genre.name}`} >{genre.name}</Link>
-
+                    <DropdownMenuItem className="cursor-pointer" key={genre.id}>
+                        <Link href={`/genre/${genre.id}?genre=${genre.name}`}>
+                            {genre.name}
+                        </Link>
                     </DropdownMenuItem>
                 ))}
             </DropdownMenuContent>
