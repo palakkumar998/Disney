@@ -1,3 +1,4 @@
+import AiSuggestion from '@/components/AiSuggestion';
 import MoviesCarousel from '@/components/MoviesCarousel';
 import { getPopularMovies, getSearchedMovies } from '@/lib/getmovies';
 import { notFound } from 'next/navigation';
@@ -19,13 +20,13 @@ async function SearchPage({ params: { term } }: Props) {
 
 
     return <div className='max-w-7xl mx-auto' >
-            <div className='flex flex-col space-y-4 mt-32 xl:mt-42 ' >
-                <h1 className='text-6xl font-bold px-10' >Results For {termToUse}</h1>
+        <div className='flex flex-col space-y-4 mt-32 xl:mt-42 ' >
+            <h1 className='text-6xl font-bold px-10' >Results For {termToUse}</h1>
 
-                {/* AI suggestoin here */}
-                <MoviesCarousel title='Movies' movies={movies} isVertical />
-                <MoviesCarousel title='You may also Like !' movies={popularMovies} />
-            </div>
+            <AiSuggestion term={termToUse} />
+            <MoviesCarousel title='Movies' movies={movies} isVertical />
+            <MoviesCarousel title='You may also Like !' movies={popularMovies} />
+        </div>
     </div>
 }
 

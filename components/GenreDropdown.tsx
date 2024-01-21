@@ -40,7 +40,7 @@ async function GenreDropdown() {
                 <DropdownMenuSeparator />
 
                 {/*//? <-------Map function with genre iterator to fetch all genres from the API------> */}
-                {data.genres.map((genre) => (
+                {data.genres?.map((genre) => (
                     <DropdownMenuItem className="cursor-pointer" key={genre.id}>
                         <Link href={`/genre/${genre.id}?genre=${genre.name}`}>
                             {genre.name}
