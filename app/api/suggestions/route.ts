@@ -3,7 +3,7 @@ export async function GET(request: Request) {
     const term = searchParams.get("term");
 
     const res = await fetch(
-        `enter your url from azure${term}`,
+        `https://my-disney-app.azurewebsites.net/api/getaisuggestion${term}`,
         {
             method: "GET",
             next: {
