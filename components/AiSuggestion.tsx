@@ -18,7 +18,7 @@ function AiSuggestion({ term }: { term: string }) {
             return (
                 <>
                     <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-white" />
-                    <p className="text-sm text-gray-400">Your OpenAI Assistant is thinking...</p>
+                    <p className="text-sm text-gray-400">Your AI Assistant is thinking...</p>
                 </>
             );
         if (error) return <>Error...</>;
@@ -32,7 +32,7 @@ function AiSuggestion({ term }: { term: string }) {
                     <p className="text-sm text-gray-400">
                         AI (Azure Functions) Assistant Suggests:{" "}
                     </p>
-                    <p className="italic text-xl"> {data.message}</p>
+                    <p className="italic text-xl"> "{data.message}"</p>
                 </div>
             </>
         );

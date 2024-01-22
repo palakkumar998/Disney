@@ -24,6 +24,7 @@ async function SearchPage({ params: { term } }: Props) {
             <h1 className='text-6xl font-bold px-10' >Results For {termToUse}</h1>
 
             <AiSuggestion term={termToUse} />
+            
             <MoviesCarousel title='Movies' movies={movies} isVertical />
             <MoviesCarousel title='You may also Like !' movies={popularMovies} />
         </div>

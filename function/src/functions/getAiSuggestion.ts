@@ -1,5 +1,3 @@
-// todo https://my-disney-app.azurewebsites.net/api/getaisuggestion
-
 
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
 import { OpenAI } from "openai";
