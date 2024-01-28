@@ -7,7 +7,7 @@ export async function GET(request: Request) {
         {
             method: "GET",
             next: {
-                revalidate: 60 * 60 * 24,
+                revalidate: 60 * 60 * 24 * 60,
             },
         }
     );

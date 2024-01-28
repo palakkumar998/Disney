@@ -1,10 +1,9 @@
 'use client'
 import useSWR from "swr";
-import { string } from "zod";
 
 
 const fetcher = (term: string) =>
-    fetch("api/suggestions?term=" + term).then((res) => res.json())
+    fetch("/api/suggestions?term=" + term).then((res) => res.json())
 
 
 function AiSuggestion({ term }: { term: string }) {
@@ -32,7 +31,7 @@ function AiSuggestion({ term }: { term: string }) {
                     <p className="text-sm text-gray-400">
                         AI (Azure Functions) Assistant Suggests:{" "}
                     </p>
-                    <p className="italic text-xl"> "{data.message}"</p>
+                    <p className="italic text-xl"> {data?.message}</p>
                 </div>
             </>
         );
