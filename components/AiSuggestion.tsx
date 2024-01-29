@@ -28,10 +28,10 @@ function AiSuggestion({ term }: { term: string }) {
                 <div className="animate-pulse rounded-full bg-gradient-to-t from-white h-10 w-10 border-2 flex-shrink-0 border-white" />
 
                 <div>
-                    <p className="text-sm text-gray-400">
-                        AI (Azure Functions) Assistant Suggests:{" "}
+                    <p className="text-sm text-violet-300">
+                        AI (OpenAI) Assistant Suggests:{" "}
                     </p>
-                    <p className="italic text-xl"> {data?.message}</p>
+                    <p className="italic text-xl text-gray-400 font-semibold"> {data?.message}</p>
                 </div>
             </>
         );
